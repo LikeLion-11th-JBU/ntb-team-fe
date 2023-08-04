@@ -1,0 +1,36 @@
+.total-main-user-introduce-wrapper {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.title{
+    margin-top: 70px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+
+
+
+.main-user-introduce-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    flex-wrap: wrap; /* Allows the user cards to wrap if there's not enough space */
+}
+
+
+.user-card {
+    
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 40%;
+    padding: 1.25rem 1rem;
+    border-radius: 8px;
+    border: 0.0625rem solid #f2f2f2;
+    background-color: #fafafa;
+}
