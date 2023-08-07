@@ -1,16 +1,23 @@
 .menu-bar {
     font-weight: bold;
-    position: relative;
+    position: fixed;
     margin-bottom: 20px;
     width: 100%;
     height: 50px;
     display: flex;
-   
+    z-index: 100;
+    /* swiper.css 에서 z-index를 건드려서, 메뉴바가 가려지는 현상 해결. */
     justify-content: space-between;
     align-items: center;
-    background-color:rgb(192, 237, 219);
-    flex-wrap: nowrap
-    
+    background-color:rgb(255, 255, 255);
+    border-bottom: 1px solid transparent; /* 투명한 선으로 초기 설정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 흐림 효과를 추가함 */
+}
+
+.menu-bar img {
+    margin-left: 20px;
+    height: 60px;
+    width: 100%;
 }
 
 * {
@@ -21,7 +28,7 @@
 
 a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     text-decoration: none;
     color: black;
     
@@ -37,11 +44,15 @@ a:nth-child(4) {
 }
 
 a:nth-child(5) {
-    opacity: 0.5;
-    margin-right: 50px;
-}
-.menu-bar h3 {
-    margin-left: 50px;
+  display: flex;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 50px;
+  background-color: rgb(143, 244, 211);
+  justify-content: center; /* 메인축을 가운데 정렬 */
+  align-items: center; /* 교차축을 가운데 정렬 */
+    
 }
 
 

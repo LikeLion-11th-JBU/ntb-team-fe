@@ -1,6 +1,8 @@
 import React from 'react';
 import './UserSearch.css';
-
+import { BsFillArrowThroughHeartFill } from "react-icons/bs";
+import { IoArrowForwardSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 const UserSearch = () => {
     
     const userDummy = [
@@ -20,10 +22,12 @@ const UserSearch = () => {
         address: '천호동',
         },
     ];
-
+    
     return (
-        <div className='total-main-user-introduce-wrapper'>           
-            <h2 className='title'>사람 찾아요!</h2>
+        <div className='total-main-user-introduce-wrapper'>    
+               
+            <h2 className='title'><BsFillArrowThroughHeartFill className='title-icon' />사람 찾아요!</h2>
+            <div className='user-talent-search-link'><Link to='/search-talent'><p>더보기<IoArrowForwardSharp /></p></Link></div>
             <div className='main-user-introduce-wrapper'>
                 {userDummy.map((user, index) => (
                     <div key={index} className='user-card'>

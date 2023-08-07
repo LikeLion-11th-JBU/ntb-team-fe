@@ -1,5 +1,6 @@
 import "./Board.css";
 import React, { useState } from 'react';
+
 const Board = () => {
 
     const initialPosts = [
