@@ -4,14 +4,17 @@
 }
 
 .title{
+    
     margin-top: 70px;
     font-size: 1.125rem;
     font-weight: 700;
-    margin-bottom: 1rem;
     line-height: 1.5;
     letter-spacing: normal;
 }
 
+.title-icon {
+    margin-right: 5px;
+}
 
 
 .main-user-introduce-wrapper {
@@ -24,7 +27,7 @@
 
 .user-card {
     
-    margin-right: 10px;
+    
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -34,3 +37,19 @@
     border: 0.0625rem solid #f2f2f2;
     background-color: #fafafa;
 }
+
+.user-talent-search-link {
+    
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.user-talent-search-link p {
+    font-size: 14px;
+    color: rgb(120, 191, 120);
+}
+
+ .user-card:nth-child(1) {
+    margin-right: 10px;
+ }
