@@ -16,13 +16,14 @@ const SwiperComponent = () => {
   return (
     <>
       <Swiper
-        pagination={{
-          type: 'fraction',
-        }}
+        pagination={true}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
+        <SwiperSlide>
+            <img src='/img/adver_img.png' />
+        </SwiperSlide>
         <SwiperSlide>
             <img src='/img/background1.jpg' />
         </SwiperSlide>
