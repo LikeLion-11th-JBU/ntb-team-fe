@@ -14,6 +14,18 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 흐림 효과를 추가함 */
 }
 
+.menu-sidebar-button {
+    font-size: 25px;
+    height: 50px;
+    width: 30px;
+    background-color: white;
+    border-color: white;
+    border: none;
+    cursor: pointer;
+    color: rgb(36, 36, 36);
+    
+}
+
 .menu-bar img {
     margin-left: 20px;
     height: 60px;
@@ -25,8 +37,11 @@
     padding: 0;
 }
 
-
 a {
+    text-decoration: none;
+    color: black;
+}
+.menu-bar a {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 12px;
     text-decoration: none;
@@ -35,15 +50,19 @@ a {
 
 }
 
-a:nth-child(3) {
+.menu-bar a:nth-child(4) {
     margin-right: 300px;
 }
 
-a:nth-child(4) {
+.menu-bar a:nth-child(5) {
+    font-size: 15px;
+}
+
+.menu-bar a:nth-child(6) {
     opacity: 0.5;
 }
 
-a:nth-child(5) {
+.menu-bar a:nth-child(7) {
   display: flex;
   width: 70px;
   height: 30px;
@@ -55,5 +74,98 @@ a:nth-child(5) {
     
 }
 
+/*  미디어 크기에 따라 메뉴바 상단에 사이드바로 변환 */
+
+@media (max-width: 690px) {
+    
+     a:nth-child(1){
+        margin-right: 30px;
+    }
+
+    .menu-bar a:nth-child(2),
+    .menu-bar a:nth-child(3),
+    .menu-bar a:nth-child(4),
+    .menu-bar a:nth-child(5),
+    .menu-bar a:nth-child(6),
+    .menu-bar a:nth-child(7) {
+        display: none; /* 맞춤재능 찾기, 커뮤니티, 내정보, 로그인 숨기기 */
+    }
+
+    .menu-bar {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    a:nth-child(6) {
+        margin-right: 0; /* 오른쪽 마진 제거 */
+    }
+}
+
+@media (min-width: 690px) {
+    .menu-sidebar-button{
+        display: none;
+    }
+}
+
+/*  미디어 크기에 따라 메뉴바 상단에 사이드바로 변환 */
 
 
+/*  사이드바 css 작업  */
+
+.sidebar {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background-color: #f5f5f5;
+    padding: 1.25rem;
+    z-index: 1050;
+    transform: translateX(0%);
+    transition: transform 0.7s ease-in-out;
+    overflow-y: auto;
+    
+    
+}
+
+.sidebar-overlay { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 어두운 색상 레이어 */
+    z-index: 1049;
+}
+
+/* 사이드바가 나타날 때 배경 레이어도 나타나도록 설정 */
+.menu-bar .menu-sidebar-button.active + .sidebar-overlay {
+    display: block;
+}
+
+.sidebar-header {
+    display: flex ;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+
+.sidebar-out {
+    font-size: 20px;
+    background-color: #f5f5f5;
+    border: none;
+}
+
+.sidebar-body {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-body a {
+    margin-top: 10px;
+}
