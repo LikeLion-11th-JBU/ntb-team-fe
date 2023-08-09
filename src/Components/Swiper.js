@@ -1,6 +1,6 @@
 import React from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide  } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -10,7 +10,7 @@ import './Swiper.css';
 
  
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay  } from 'swiper/modules';
 
 const SwiperComponent = () => {
   return (
@@ -18,7 +18,8 @@ const SwiperComponent = () => {
       <Swiper
         pagination={true}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay ,Pagination, Navigation]}
+        autoplay={{ delay: 6000, disableOnInteraction: false }} // 배너 6초마다 전환
         className="mySwiper"
       >
         <SwiperSlide>
