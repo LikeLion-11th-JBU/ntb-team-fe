@@ -1,4 +1,4 @@
-import "./Header.css";
+import "../Scss/Header.scss";
 import { Link } from 'react-router-dom';
 import { BsFillPersonFill } from "react-icons/bs";
 import React, { useState, useEffect } from 'react';

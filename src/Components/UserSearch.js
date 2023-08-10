@@ -1,5 +1,5 @@
 import React from 'react';
-import './UserSearch.css';
+import '../Scss/UserSearch.scss';
 import { BsFillArrowThroughHeartFill } from "react-icons/bs";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';

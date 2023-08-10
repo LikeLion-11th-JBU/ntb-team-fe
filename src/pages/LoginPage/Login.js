@@ -1,13 +1,29 @@
 import { React } from "react";
-import "./Login.css";   
+import "./Login.scss";   
+
 
 const Login = () => {
 
 
     return(
         <div className="main-components-container ">
-            로그인 페이지!
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            <div>로그인 페이지!</div>
+            
         </div>
+    
     );
 }
 

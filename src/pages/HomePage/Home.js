@@ -1,9 +1,9 @@
 import React from "react";
-import "./Home.css";
+import "./Home.scss";
 import UserSearch from "../../Components/UserSearch";
 import SwiperComponent from "../../Components/Swiper";
 import MainPost from "../../Components/MainPost";
-import Footer from "../../Components/Footer";
+
 
 const Home = () => {
 
@@ -17,7 +17,7 @@ const Home = () => {
             <SwiperComponent />
             <UserSearch />
             <MainPost posts={posts} />
-            <Footer />
+            
         </div>
         
     ) 

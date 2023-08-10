@@ -1,0 +1,42 @@
+.main-searchtalent-wrapper {
+	margin-left: 50px;
+	margin-right: 50px;
+	&-body {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+	}
+}
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.category-sidebar-container {
+	box-shadow: 2px 5px rgba(0, 0, 0, 0.4);
+	border: 2px solid ;
+	border-radius: 5px;
+	padding: 10px 10px;
+	margin-right: 20px;
+	height: 400px;
+	li {
+		margin-bottom: 10px;
+	}
+}
+.main-searchtalent-user-card {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	padding: 1.25rem 1rem;
+	border-radius: 8px;
+	border: 0.0625rem solid #f2f2f2;
+	background-color: #fafafa;
+	margin-bottom: 10px;
+	p {
+        
+	}
+	a {
+		font-size: 14px;
+		color: rgb(120, 191, 120);
+	}
+}

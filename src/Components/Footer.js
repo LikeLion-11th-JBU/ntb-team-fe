@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import '../Scss/Footer.scss';
 
 const Footer = () => {
     const thisYear = () => {

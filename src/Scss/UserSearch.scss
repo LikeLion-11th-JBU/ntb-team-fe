@@ -1,0 +1,42 @@
+.total-main-user-introduce-wrapper {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.title {
+	margin-top: 70px;
+	font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: normal;
+	&-icon {
+		margin-right: 5px;
+	}
+}
+.main-user-introduce-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.user-card {
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	width: 40%;
+	padding: 1.25rem 1rem;
+	border-radius: 8px;
+	border: 0.0625rem solid #f2f2f2;
+	background-color: #fafafa;
+	&:nth-child(1) {
+		margin-right: 10px;
+	}
+}
+.user-talent-search-link {
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: flex-end;
+	p {
+		font-size: 14px;
+		color: rgb(120, 191, 120);
+	}
+}
