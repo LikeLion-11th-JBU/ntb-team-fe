@@ -1,4 +1,4 @@
-import "./Board.css";
+import "../Scss/Board.scss";
 import React, { useState } from 'react';
 
 const Board = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Board from "../../Components/Board";
-import "./Community.css";
+import "./Community.scss";
 
 const Community = () => {
     return (

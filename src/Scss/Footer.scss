@@ -1,17 +1,17 @@
 .footer-wrapper {
     padding-bottom: 10px;
     font-size: 10px;
-    position: relative;
-    transform: translateY(0%);
+    position: absolute;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
-    height: fit-content;
+    align-items: center;
     background-color: rgb(241, 241, 241);
     border-top: 1px solid transparent; /* 투명한 선으로 초기 설정 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* 흐림 효과를 추가함 */
-    margin-top: 100px;
+    margin-top: 50px;
+    
 }
 
 .footer-total-wrapper .logo-image {

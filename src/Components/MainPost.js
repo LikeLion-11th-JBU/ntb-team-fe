@@ -1,8 +1,9 @@
-import './MainPost.css';
+import '../Scss/MainPost.scss';
 import React from 'react';
 import { BsChatSquareDotsFill } from "react-icons/bs";
 import { IoArrowForwardSharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+
 const MainPost = ({ posts }) => {
     
     return (
