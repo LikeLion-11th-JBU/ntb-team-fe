@@ -9,6 +9,7 @@ const Register = () => {
   const [ConfirmPassword, setConfirmPassword] = useState('');
   const [MainCategory, setMainCategory] = useState(''); // 대분류 추가
   const [SubCategory, setSubCategory] = useState(''); // 중분류 추가
+ const [subSubCategory, setSubSubCategory] = useState('');// 소분류 추가
 
   const onEmailHandler = (event) => {
     setEmail(event.currentTarget.value);
@@ -23,13 +24,18 @@ const Register = () => {
     setConfirmPassword(event.currentTarget.value);
   };
   const onMainCategoryHandler = (event) => {
-    // 대분류 선택 핸들러
     setMainCategory(event.currentTarget.value);
-    setSubCategory(''); // 대분류 선택 시 중분류 초기화
+    setSubCategory('');
+    setSubSubCategory('');
   };
+
   const onSubCategoryHandler = (event) => {
-    // 중분류 선택 핸들러
     setSubCategory(event.currentTarget.value);
+    setSubSubCategory('');
+  };
+
+  const onSubSubCategoryHandler = (event) => {
+    setSubSubCategory(event.currentTarget.value);
   };
   const onSubmitHandler = (event) => {
     event.preventDefault();
@@ -43,6 +49,7 @@ const Register = () => {
     console.log('Password:', Password);
     console.log('Main Category:', MainCategory);
     console.log('Sub Category:', SubCategory);
+    console.log('Sub-Sub Category: ', subSubCategory);
 
     // 여기에서 회원가입 로직을 추가할 수 있습니다.
   };
@@ -114,32 +121,45 @@ const Register = () => {
               <option value="art">예술</option>
             </select>
           </div>
-          {MainCategory && (
-            <div className="regi-subcategory">
+          {MainCategory === 'tech' && (
+            <div className="register-subcategory-input">
               <label>
-                중분류 선택 <br />
+                중분류 (기술) <br />
               </label>
-              <select
-                value={SubCategory}
-                onChange={onSubCategoryHandler}
-                required
-              >
+              <select value={SubCategory} onChange={onSubCategoryHandler}>
                 <option value="">중분류를 선택하세요</option>
-                {MainCategory === 'tech' && (
-                  <>
-                    <option value="developer">개발자</option>
-                    <option value="designer">디자이너</option>
-                  </>
-                )}
-                {MainCategory === 'art' && (
-                  <>
-                    <option value="painter">화가</option>
-                    <option value="musician">음악가</option>
-                  </>
-                )}
+                <option value="programming">컴퓨터 프로그래밍</option>
+                <option value="photo-video-editing">사진/영상편집</option>
+                <option value="agriculture">농업</option>
               </select>
             </div>
           )}
+          {MainCategory === 'art' && (
+            <div className="register-subcategory-input">
+              <label>
+                중분류 (예술) <br />
+              </label>
+              <select value={SubCategory} onChange={onSubCategoryHandler}>
+                <option value="">중분류를 선택하세요</option>
+                <option value="music">음악</option>
+                <option value="art-painting">미술</option>
+                <option value="sports">체육</option>
+              </select>
+            </div>
+          )}
+          {SubCategory && (
+            <div className="register-subsubcategory-input">
+              <label>
+                소분류 <br />
+              </label>
+              <input
+                type="text"
+                value={subSubCategory}
+                placeholder={`상세하게 적어주세요!`}
+                onChange={onSubSubCategoryHandler}
+              />
+            </div>
+          )}{' '}
           <div className="regi-submit">
             <button className="regi-btn" type="submit">
               회원가입
