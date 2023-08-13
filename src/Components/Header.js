@@ -1,7 +1,7 @@
 import "../Scss/Header.scss";
 import { Link } from 'react-router-dom';
 import { BsFillPersonFill } from "react-icons/bs";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ImMenu } from "react-icons/im";
 
 const Header = () => {
@@ -17,7 +17,7 @@ const Header = () => {
             
             <div className="menu-bar">
                 <Link to='/'>
-                    <img className="LogoImage" src="/img/Letskillit_logo.png" />
+                    <img className="LogoImage" alt="logo" src="/img/Letskillit_logo.png" />
                 </Link>
                 <button className="menu-sidebar-button" onClick={toggleMenu}><ImMenu /></button>
                 <Link to='/search-talent'><p>맞춤재능 찾기</p></Link>
@@ -35,6 +35,7 @@ const Header = () => {
                     </div>
                     <hr />
                     <div className="sidebar-body">
+                        <Link to="/" className="sidebar-menu-home"  onClick={toggleMenu}>홈</Link>
                         <Link to="/login" className="sidebar-menu-login"  onClick={toggleMenu}>로그인</Link>
                         <Link to="/register" className="sidebar-menu-register"  onClick={toggleMenu} >회원가입</Link>
                         <Link to="/mypage" className="sidebar-menu-myinfor"  onClick={toggleMenu}><BsFillPersonFill /></Link>

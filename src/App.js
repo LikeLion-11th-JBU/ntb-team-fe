@@ -8,7 +8,10 @@ import Community from "./pages/CommunityPage/Community";
 import SearchTalent from "./pages/SearchTalentPage/SearchTalent";
 import MyPage from "./pages/MyPage/MyPage";
 import Footer from "./Components/Footer";
+import WritePost from "./pages/WritePostPage/WritePost";
 function App() {
+
+
   return (
     <div className="App">
       <Header /> 
@@ -19,6 +22,7 @@ function App() {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+      <Route path="/writepost" element={<WritePost />}  />
       </Routes>
       <Footer />
     </div>
