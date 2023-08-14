@@ -1,6 +1,8 @@
 .total-main-user-introduce-wrapper {
 	margin-left: 50px;
 	margin-right: 50px;
+
+
 }
 .title {
 	margin-top: 70px;
@@ -21,14 +23,47 @@
 .user-card {
 	display: flex;
 	flex-wrap: wrap;
-	flex-grow: 1;
+	flex: 1 1 auto;
 	width: 40%;
 	padding: 1.25rem 1rem;
 	border-radius: 8px;
 	border: 0.0625rem solid #f2f2f2;
 	background-color: #fafafa;
+
+	
+
 	&:nth-child(1) {
 		margin-right: 10px;
+	}
+	.user-card-header-photo {
+		border: 2px solid #030303;
+		width: 50px;
+		height: 50px;
+		border-radius: 10px;
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+
+	.user-card-header {
+		display: flex;
+		align-items: baseline;
+		width: 100%;
+
+		
+	}
+
+	.user-card-body {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		width: 100%;
+		p{
+			margin-bottom: 5px;
+			width: 100%;
+		}
+	}
+
+	.user-card-footer {
+		display: flex;
 	}
 }
 .user-talent-search-link {
