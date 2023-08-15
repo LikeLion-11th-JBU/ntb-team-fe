@@ -9,7 +9,7 @@ const Register = () => {
   const [ConfirmPassword, setConfirmPassword] = useState('');
   const [MainCategory, setMainCategory] = useState(''); // 대분류 추가
   const [SubCategory, setSubCategory] = useState(''); // 중분류 추가
- const [subSubCategory, setSubSubCategory] = useState('');// 소분류 추가
+  const [subSubCategory, setSubSubCategory] = useState(''); // 소분류 추가
 
   const onEmailHandler = (event) => {
     setEmail(event.currentTarget.value);
@@ -56,7 +56,9 @@ const Register = () => {
 
   return (
     <div className="main-components-container">
-      <h1 className="regi-title">Let Skill it에 오신 것을 환영합니다!</h1>
+      <div className='regi-title'>
+        <h1>Let Skill it에 오신 것을 환영합니다!</h1>
+      </div>
       <div className="regi-frame">
         <form className="regi-form" onSubmit={onSubmitHandler}>
           <div className="regi-name-input">
