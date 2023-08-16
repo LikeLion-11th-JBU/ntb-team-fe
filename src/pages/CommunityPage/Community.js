@@ -6,8 +6,8 @@ const Community = () => {
     const navigate = useNavigate();
 
     const [posts, setPosts] = useState([
-        { boardType: '자유게시판'  ,id: 1, author: '작성자1', title: '첫 번째 게시물', content: '첫 번째 게시물 내용입니다.' },
-        { boardType: '구해요게시판' ,id: 2, author: '작성자2', title: '두 번째 게시물', content: '두 번째 게시물 내용입니다.' },
+        { boardType: '자유게시판'  , date: '23.07.12', author: '작성자1', title: '제목1 제목1'},
+        { boardType: '구해요게시판' , date: '23.06.15', author: '작성자2', title: '제목 제목2'},
     ]);
 
     const moveToWrite = () => {
@@ -44,13 +44,18 @@ const Community = () => {
                         <li>원해요 커뮤니티</li>
                     </div>
                     <div className="main-post-container">
+                        <div className="main-post-header">
+                            <span>게시판 유형</span>
+                            <span>제목</span>
+                            <span>작성자</span>
+                            <span>게시일</span>
+                        </div>
                         {posts.map((post) => (
-                            <div key={post.id} className='post-card'>
-                                <p>boardType: {post.boardType}</p>
-                                <p>ID: {post.id}</p>
-                                <p>Author: {post.author}</p>
-                                <p>Title: {post.title}</p>
-                                <p>Content: {post.content}</p>
+                            <div key={post.id} className='main-post-card'>
+                                <p>{post.boardType}</p>
+                                <p>{post.title}</p>
+                                <p>{post.author}</p>
+                                <p>{post.date}</p>
                             </div>
                             ))
                         }
