@@ -1,5 +1,7 @@
 .regi-title {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .regi-frame {
@@ -29,7 +31,12 @@
 .regi-category {
   margin-bottom: 10px;
 }
-
+.register-subcategory-input {
+ margin-bottom: 10px;
+}
+.register-subsubcategory-input {
+  margin-bottom: 10px;
+}
 .regi-submit {
   display: flex;
   justify-content: center;

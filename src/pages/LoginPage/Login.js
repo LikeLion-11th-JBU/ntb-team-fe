@@ -46,7 +46,7 @@ const Login = () => {
               type="password"
               value={password}
               placeholder="비밀번호를 입력하세요."
-              onChange={onPasswordHandler} // 오타 수정: onchange -> onChange
+              onChange={onPasswordHandler}
             />
           </div>
           <div className="login-submit">
