@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Register.scss';
 import Footer from '../../Components/Footer';
+
+
 
 const Register = () => {
   const [Email, setEmail] = useState('');
   const [Name, setName] = useState('');
   const [Password, setPassword] = useState('');
   const [ConfirmPassword, setConfirmPassword] = useState('');
+  const [openchat,setOpenchat] = useState('');
   const [MainCategory, setMainCategory] = useState(''); // 대분류 추가
   const [SubCategory, setSubCategory] = useState(''); // 중분류 추가
   const [subSubCategory, setSubSubCategory] = useState(''); // 소분류 추가
+  const [selfIntroduce, setSelfintroduce] = useState('');
 
   const onEmailHandler = (event) => {
     setEmail(event.currentTarget.value);
@@ -17,11 +21,17 @@ const Register = () => {
   const onNameHandler = (event) => {
     setName(event.currentTarget.value);
   };
+  const onSelfIntroduceHandler = (event) => {
+    setSelfintroduce(event.currentTarget.value);
+  };
   const onPasswordHandler = (event) => {
     setPassword(event.currentTarget.value);
   };
   const onConfirmPasswordHandler = (event) => {
     setConfirmPassword(event.currentTarget.value);
+  };
+  const onOpenchatHandler = (event) => {
+    setOpenchat(event.currentTarget.value)
   };
   const onMainCategoryHandler = (event) => {
     setMainCategory(event.currentTarget.value);
@@ -73,6 +83,18 @@ const Register = () => {
               required
             />
           </div>
+          <div className="self-introduce">
+            <label>
+              한 줄 소개 <br />
+            </label>
+            <input
+              type="text"
+              value={selfIntroduce}
+              placeholder="한 줄 소개를 입력해주세요:)"
+              onChange={onSelfIntroduceHandler}
+              required
+            />
+          </div>
           <div className="regi-email-input">
             <label>
               이메일 <br />
@@ -106,6 +128,18 @@ const Register = () => {
               value={ConfirmPassword}
               placeholder="비밀번호를 입력하세요."
               onChange={onConfirmPasswordHandler}
+              required
+            />
+          </div>
+          <div className="openchat-address">
+            <label>
+              오픈채팅방 주소 <br />
+            </label>
+            <input
+              type="text"
+              value={openchat}
+              placeholder="소통을 위한 채팅방 주소"
+              onChange={onOpenchatHandler}
               required
             />
           </div>
